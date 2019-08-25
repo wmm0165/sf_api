@@ -3,13 +3,14 @@
 # @Author : wangmengmeng
 import requests
 import hashlib
-# from common.read_config import ReadConfig
-
+from common.read_config import config
+import json
 
 class Login:
     def __init__(self):
-        # self.conf = ReadConfig()
-        password = '123456'
+        self.session = requests.session()
+        self.uername = config.get('default','username')
+        password = str(config.get('default', 'password'))
         self.password = self.handle_password(password)
 
     def handle_password(self, password):
@@ -18,7 +19,26 @@ class Login:
         password = m.hexdigest()
         return password
 
+    def login(self):
+        url = config.get('default','address') + '/syscenter/api/v1/currentUser'
+        data = {"name": self.uername, "password": self.password}
+        headers = {'Content-Type': "application/json"}
+        response = self.session.post(url,data=json.dumps(data),headers=headers)
 
-if __name__ == '__main__':
-    login = Login()
-    print(login.password)
+    def start_sf(self):
+        url = config.get('auditcenter','url') + '/api/v1/startAuditWork'
+        response = self.session.get(url)
+
+    @property
+    def get_session(self):
+        self.login()
+        self.start_sf()
+        # print(self.session)
+        return self.session
+
+session = Login().get_session
+
+# if __name__ == '__main__':
+#     login = Login()
+#     print(login.password)
+#     login.login()

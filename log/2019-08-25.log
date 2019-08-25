@@ -1,0 +1,12 @@
+2019-08-25 17:28:20-common.record_log-read_config.py-[line:17]-INFO-[日志信息]: 读取配置文件default-username的值为admin
+2019-08-25 17:28:20-common.record_log-read_config.py-[line:17]-INFO-[日志信息]: 读取配置文件default-password的值为123456
+2019-08-25 17:28:20-common.record_log-read_config.py-[line:17]-INFO-[日志信息]: 读取配置文件default-address的值为http://10.1.1.71:9999
+2019-08-25 17:28:21-common.record_log-read_config.py-[line:17]-INFO-[日志信息]: 读取配置文件auditcenter-url的值为http://10.1.1.71:9999/auditcenter
+2019-08-25 17:28:21-common.record_log-get_noparam_api.py-[line:22]-INFO-[日志信息]: ------开始执行没有参数的get请求测试用例------
+2019-08-25 17:28:21-common.record_log-read_config.py-[line:17]-INFO-[日志信息]: 读取配置文件auditcenter-url的值为http://10.1.1.71:9999/auditcenter
+2019-08-25 17:28:21-common.record_log-send_request.py-[line:20]-INFO-[日志信息]: 开始发送get请求，URL为：http://10.1.1.71:9999/auditcenter/api/v1/patientCondtionList，请求数据为:None
+2019-08-25 17:28:21-common.record_log-read_config.py-[line:17]-INFO-[日志信息]: 读取配置文件auditcenter-url的值为http://10.1.1.71:9999/auditcenter
+2019-08-25 17:28:21-common.record_log-send_request.py-[line:20]-INFO-[日志信息]: 开始发送get请求，URL为：http://10.1.1.71:9999/auditcenter/api/v1/newTaskHint，请求数据为:None
+2019-08-25 17:28:21-common.record_log-read_config.py-[line:17]-INFO-[日志信息]: 读取配置文件auditcenter-url的值为http://10.1.1.71:9999/auditcenter
+2019-08-25 17:28:21-common.record_log-send_request.py-[line:20]-INFO-[日志信息]: 开始发送get请求，URL为：http://10.1.1.71:9999/auditcenter/api/v1/payTypeList，请求数据为:None
+2019-08-25 17:28:21-common.record_log-get_noparam_api.py-[line:26]-INFO-[日志信息]: ------没有参数的get请求测试用例执行结束------
