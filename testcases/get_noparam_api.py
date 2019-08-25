@@ -29,10 +29,14 @@ class GetNoParamApi(unittest.TestCase):
 
     @ddt.data(*api_list)
     def test_1(self, api):
-        url = config.get('auditcenter', 'url') + api
-        response = request(method='get', url=url)
-        self.assertEqual(response.json()['code'], '200')
-        self.assertEqual(response.json()['message'], 'OK')
+        try:
+            url = config.get('auditcenter', 'url') + api
+            response = request(method='get', url=url)
+            self.assertEqual(response.json()['code'], '200')
+            self.assertEqual(response.json()['message'], 'OK')
+        except AssertionError:
+            print('断言失败')
+            raise
 
 
 if __name__ == '__main__':
