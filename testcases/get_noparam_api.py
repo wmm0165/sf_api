@@ -11,7 +11,8 @@ api_list = ['/api/v1/patientCondtionList',
             '/api/v1/newTaskHint',
             '/api/v1/payTypeList',
             '/api/v1/analysisType',
-            '/api/v1/drugCategory'
+            '/api/v1/drugCategory',
+            '/api/v1/endAuditWork'
             ]
 
 
